@@ -5,14 +5,14 @@ export default {
       inputMsg: '', // 사용자가 입력한 todo 데이터
     };
   },
-  emits: ['add-Todo'],
+  emits: ['add-todo'],
   methods: {
     addTodo() {
-      if (this.inputMsg.length === 0) {
+      if (this.inputMsg.trim().length === 0) {
         alert('내용을 입력해주세요.');
         return;
       }
-      this.$emit('add-Todo', this.inputMsg); // 부모 컴포넌트 이벤트 호출, 입력 메세지를 부모 컴포넌트 이벤트에 전달
+      this.$emit('add-todo', this.inputMsg); // 부모 컴포넌트 이벤트 호출, 입력 메세지를 부모 컴포넌트 이벤트에 전달
       this.inputMsg = '';
     },
   },
