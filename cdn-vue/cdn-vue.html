@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- cdn 방싟으로 뷰 라이브러리를 불러온다 -->
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <div id="app">{{message}}</div>
+
+    <script>
+      // 비구조할당이란 배열이나 객체속성을 해체하여 개별변수에 값을 담
+      // 뷰 객채의 createApp 함수를 객체로 가져온 것
+      const { createApp } = Vue;
+      createApp({
+        data() {
+          return {
+            message: 'Hello Vuejs!',
+          };
+        },
+      }).mount('#app');
+    </script>
+  </body>
+</html>
