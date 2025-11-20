@@ -1,0 +1,24 @@
+1. watch( 반응형 데이터, (현재값, 이전값) => {}, 옵션 : immediate/deep/post |sync ) 함수
+  - 반응형 데이터
+    * ref()
+      반응형 데이터는 반응형 데이터 자체를(변수의 값이 와전히 달라지는 것) 감시 ( 배열이나, 객체의 속성 값 변경은 감시 x)
+    * reactive()
+      콜백 함수를 통해 값 감시
+
+2. watchEffect() 함수
+  - 콜백 함수 내부에서 참조하는 모든 반응형 데이터를 감시한다. 옵션스 api에는 x
+    deep, immediate 옵션이 true 적용되어 있음
+    콜백 함수의 시점을 결정하는 flush 옵션이 있음.
+
+
+
+3. watchPostEffect() 함수
+  Dom 갱신 이후 콜백 함수 호출
+
+4. props
+  - 컴포넌트에서 다른 컴포넌트로 데이터를 전달할 때 사용하는 속성
+    defineProps 함수를 이용하여 정의
+
+5. emits
+  옵션스 Api: 컴포넌트에서 전달한 이벤트를 전달 받을 때 emits을 사용
+  컴포지션 API: defineEmits() 함수를 사용함.
